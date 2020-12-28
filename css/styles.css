@@ -47,6 +47,10 @@ button {
   font-family: inherit;
 }
 
+img {
+  display: block;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -61,6 +65,7 @@ button {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline: 2px solid tomato;
 }
 
 .header {
@@ -87,7 +92,24 @@ button {
 }
 
 /*Стили панели навигации*/
+
+.nav {
+  margin-left: 93px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .nav-link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
   font-style: normal;
   font-weight: 500;
@@ -105,6 +127,10 @@ button {
   color: var(--accent-color);
 }
 
+.address {
+  margin-left: auto;
+}
+
 .address-link {
   color: var(--primary-text-color);
   font-style: normal;
@@ -118,14 +144,36 @@ button {
   color: var(--accent-color);
 }
 
+.address-list {
+  display: flex;
+}
+
+.address-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.general-nav {
+  display: flex;
+  align-items: center;
+}
+
 /*Стили блока героя*/
 
 .hero {
   background-color: var(--sec-background-color);
   text-align: center;
+  margin-bottom: 94px;
+}
+
+.hero-content {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--white-text-color);
   font-style: normal;
   font-weight: 900;
@@ -133,13 +181,16 @@ button {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .hero-btn {
   display: inline-block;
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 0px;
+  min-width: 200px;
+  height: 50px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   color: var(--white-text-color);
   background-color: var(--accent-color);
@@ -149,13 +200,6 @@ button {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-
-  border-radius: 4px;
-  padding: 10px 32px;
-  border: 0px;
-  min-width: 200px;
-  height: 50px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /*Стили 
@@ -164,61 +208,84 @@ button {
 Список сотрудников
 Лучшие работы студии
 */
+.examples {
+  margin-bottom: 94px;
+}
 
 .examples-title,
 .team-title,
-.advantages-item,
-.team-item,
+.advantages-title,
+.team-member,
 .works-title {
   color: var(--title-text-color);
 }
 
-.advantages-item {
+.advantages {
+  margin-bottom: 94px;
+}
+
+.advantages-list .advantages-item + .advantages-item {
+  margin-left: 30px;
+}
+
+.advantages-title {
+  margin-bottom: 10px;
+  margin-top: 0;
+  padding: 0;
+
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
 
-  margin-bottom: 10px;
-  margin-top: 0;
-  padding: 0;
+.advantages-list {
+  display: flex;
+}
+
+.examples-list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .examples-title,
 .team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-
-  margin-top: 0;
-  margin-bottom: 50px;
 }
 
 .team-item {
+  background-color: var(--main-background-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.team-member {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-  /* identical to box height */
-
   text-align: center;
-
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 
 .works-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-
-  margin-top: 0;
-  margin-bottom: 4px;
 }
 
 .advantages-content,
@@ -228,16 +295,19 @@ button {
 }
 
 .advantages-content {
+  padding: 0;
+  margin: 0;
+
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
-
-  padding: 0;
-  margin: 0;
 }
 
 .team-content {
+  margin: 0;
+  padding-bottom: 30px;
+
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -245,21 +315,29 @@ button {
   /* identical to box height */
 
   text-align: center;
-
-  margin: 0;
 }
 
 .team {
   background-color: var(--add-background-color);
 }
 
+.general-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
 .works-content {
+  margin: 0;
+
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.87;
-
-  margin: 0;
 }
 
 /*Стили 
@@ -267,6 +345,11 @@ button {
 
 .categories-btn {
   display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0px;
+  min-width: 73px;
+  height: 38px;
 
   color: var(--title-text-color);
   background-color: var(--add-background-color);
@@ -277,12 +360,6 @@ button {
   line-height: 1.62;
   letter-spacing: 0.03em;
   text-align: center;
-
-  border-radius: 4px;
-  padding: 6px 22px;
-  border: 0px;
-  min-width: 73px;
-  height: 38px;
 }
 
 .categories-btn:hover,
@@ -304,9 +381,9 @@ button {
 }
 
 .address-footer {
-  color: var(--white-text-color);
-
   margin-bottom: 9px;
+
+  color: var(--white-text-color);
 }
 
 .footer-list .link {
@@ -321,11 +398,16 @@ button {
   line-height: 1.71;
 }
 
-.mail {
+.footer-list .footer-item:not(:last-child) {
   display: inline-block;
   margin-bottom: 9px;
 }
 
 .under {
   margin-bottom: 20px;
+}
+
+.footer-content {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
