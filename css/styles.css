@@ -71,6 +71,12 @@ img {
   background-color: var(--main-background-color);
 }
 
+.portfolio-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+}
+
 /*Стили логотипа*/
 .logo {
   display: inline-block;
@@ -161,10 +167,6 @@ img {
 .hero {
   background-color: var(--sec-background-color);
   text-align: center;
-  margin-bottom: 94px;
-}
-
-.hero-content {
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -190,6 +192,7 @@ img {
   min-width: 200px;
   height: 50px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
 
   color: var(--white-text-color);
   background-color: var(--accent-color);
@@ -208,7 +211,7 @@ img {
 Лучшие работы студии
 */
 .examples {
-  margin-bottom: 94px;
+  padding-bottom: 94px;
 }
 
 .examples-title,
@@ -220,7 +223,8 @@ img {
 }
 
 .advantages {
-  margin-bottom: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .advantages-item {
@@ -299,20 +303,10 @@ img {
 }
 
 .works-item {
-  width: 370px;
-  /*
-  border: 1px solid #eeeeee;
-  */
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
+  flex-basis: calc(100% / 3 - 60px);
 
-.works-item:nth-child(3n) {
-  margin-right: 0px;
-}
-
-.works-item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .advantages-content,
@@ -339,16 +333,12 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 1.19;
-  /* identical to box height */
 
   text-align: center;
 }
 
 .team {
   background-color: var(--add-background-color);
-}
-
-.general-team {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -371,7 +361,8 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 94px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 .works-description {
@@ -395,11 +386,14 @@ img {
 
 /*Стили 
 Блок преимуществ*/
+.categories {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 .categories-list {
   display: flex;
   margin-bottom: 50px;
-  margin-top: 94px;
   justify-content: center;
 }
 
@@ -414,6 +408,7 @@ img {
   border: 0px;
   min-width: 73px;
   height: 38px;
+  cursor: pointer;
 
   color: var(--title-text-color);
   background-color: var(--add-background-color);
@@ -438,6 +433,8 @@ img {
 
 .footer {
   background-color: var(--sec-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .logo-studio-footer {
@@ -469,9 +466,4 @@ img {
 
 .under {
   margin-bottom: 20px;
-}
-
-.footer-content {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
